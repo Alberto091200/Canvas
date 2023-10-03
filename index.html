@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            overflow: none;
+        }
+    
+        canvas{
+            display: block;
+            background-color: grey;
+        }
+    </style>
+</head>
+    <canvas></canvas>
+
+    <script>
+
+        
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+
+        
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
+
+        //------------------STEP 1--------------------------------
+
+        
+        //Circulo fuera
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(100, 100, 80, 0, Math.PI *2)
+        ctx.stroke()
+        ctx.closePath()
+
+        //Ojo derecho
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(70, 75, 10, 0, Math.PI *2)
+        ctx.stroke()
+        ctx.closePath()
+
+        //Ojo izquierdo
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(130, 75, 10, 0, Math.PI *2)
+        ctx.stroke()
+        ctx.closePath()
+
+        //Sonrisa
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(100, 120, 40, 0.5, 2.6)
+        ctx.stroke()
+        ctx.closePath()
+
+
+        //------------------STEP 2--------------------------------
+
+
+        
+        //Primer Cuadrado
+            //Exterior
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.moveTo(50, 200)
+        ctx.lineTo(50, 400)
+        ctx.lineTo(250, 400)
+        ctx.lineTo(250, 200)
+        ctx.lineTo(50, 200)
+        ctx.stroke()
+        ctx.closePath()
+
+            //Circulos
+        let x = 100;
+        let y = 250;
+        let rad = 25
+        let circuloCompleto = Math.PI * 2;
+
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(x, y, rad, 0, circuloCompleto)
+        ctx.fillStyle = "blue"
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(x + 100, y, rad, 0, circuloCompleto)
+        ctx.fillStyle = "green"
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(x, y + 100, rad, 0, circuloCompleto)
+        ctx.fillStyle = "red"
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(x + 100, y + 100, rad, 0, circuloCompleto)
+        ctx.fillStyle = "yellow"
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+
+
+
+        //Segundo cuadrado
+            //Exterior
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.moveTo(300, 200)
+        ctx.lineTo(300, 400)
+        ctx.lineTo(500, 400)
+        ctx.lineTo(500, 200)
+        ctx.lineTo(300, 200)
+        ctx.stroke()
+        ctx.closePath()
+
+            //Interior
+        ctx.beginPath()
+        ctx.strokeStyle = "orange"
+        ctx.moveTo(400, 200)
+        ctx.lineTo(400, 300)
+        ctx.stroke()
+        ctx.closePath()
+
+        ctx.beginPath()
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "orange"
+        ctx.moveTo(300, 400)
+        ctx.lineTo(400, 300)
+        ctx.lineTo(500, 400)
+        ctx.stroke()
+        ctx.closePath()
+
+        //Tercer cuadrado
+             //Exterior
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.moveTo(550, 200)
+        ctx.lineTo(550, 400)
+        ctx.lineTo(750, 400)
+        ctx.lineTo(750, 200)
+        ctx.lineTo(550, 200)
+        ctx.stroke()
+        ctx.closePath()
+
+            //Cuadrado Interior
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.moveTo(575, 220)
+        ctx.lineTo(575, 380)
+        ctx.lineTo(725, 380)
+        ctx.lineTo(725, 220)
+        ctx.lineTo(575, 220)
+        ctx.fillStyle = "blue"
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+            //Circulo Interior
+        ctx.beginPath()
+        ctx.strokeStyle = "black"
+        ctx.arc(650, 300, 40, 0, Math.PI * 2)
+        ctx.fillStyle = "grey"
+        ctx.fill()
+        ctx.stroke()
+        ctx.closePath()
+
+
+
+        
+    </script>
+
+<body>
+    
+</body>
+</html>

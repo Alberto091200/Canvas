@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+        body{
+            margin: 0;
+            overflow: none;
+        }
+    
+        canvas{
+            display: block;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+
+
+    <canvas></canvas>
+
+    <script>
+
+        
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+
+        
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
+    
+
+    //------------------STEP 4--------------------------------
+        
+        const ajedrezNegro = () => {
+            ctx.beginPath()
+            ctx.rect(10, 10, 50, 50);
+            ctx.fillStyle = "black"
+            ctx.fill()
+        };
+
+        for (let i = 0; i < 7; i++){
+            ajedrezNegro() = ajedrezNegro(10 * 2, 500, 50, 50,)
+        }
+
+        ajedrezNegro();
+        
+
+
+        /*
+        let xAje = 10;
+        let yAje = 500;
+        let widthAje = 50;
+        let heightAje = 50;
+
+
+        const ajedrezNegro = (xAje, yAje, widthAje, heightAje) => {
+            ctx.beginPath()
+            ctx.rect(xAje, yAje, widthAje, heightAje);
+            ctx.fillStyle = "black"
+            ctx.fill()
+        };
+
+        ajedrezNegro();
+        */
+    </script>
+</body>
+</html>

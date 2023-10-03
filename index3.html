@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            overflow: none;
+        }
+    
+        canvas{
+            display: block;
+            background-color: grey;
+        }
+    </style>
+</head>
+
+
+<body>
+    <canvas></canvas>
+
+    <script>
+
+        
+        const canvas = document.querySelector("canvas");
+        const ctx = canvas.getContext("2d");
+
+        
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
+
+
+
+
+
+
+        function drawCircle(posX, posY, radius, color){
+        //Circulo fuera
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(100, 100, 80, 0, Math.PI *2)
+            ctx.stroke()
+            ctx.closePath()
+        } 
+
+        function drawCircleOjos(posX, posY, radius, color){
+        //Ojo derecho
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(70, 75, 10, 0, Math.PI *2)
+            ctx.stroke()
+            ctx.closePath()
+
+        //Ojo izquierdo
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(130, 75, 10, 0, Math.PI *2)
+            ctx.stroke()
+            ctx.closePath()
+        }
+ 
+
+        function drawCircleBoca(posX, posY, radius, color){
+        //Sonrisa
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(100, 120, 40, 0.5, 2.6)
+            ctx.stroke()
+            ctx.closePath()
+        }
+
+        function drawCircleTodo(posX, posY, radius, color){
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(100, 100, 80, 0, Math.PI *2)
+            ctx.stroke()
+            ctx.closePath()
+
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(70, 75, 10, 0, Math.PI *2)
+            ctx.stroke()
+            ctx.closePath()
+
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(130, 75, 10, 0, Math.PI *2)
+            ctx.stroke()
+            ctx.closePath()
+
+            ctx.beginPath()
+            ctx.strokeStyle = "black"
+            ctx.arc(100, 120, 40, 0.5, 2.6)
+            ctx.stroke()
+            ctx.closePath()
+        }
+        
+
+
+
+
+        //drawCircle()
+        //drawCircleOjos()
+        //drawCircleBoca()
+        drawCircleTodo()
+    </script>
+
+</body>
+</html>
